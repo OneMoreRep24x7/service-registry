@@ -1,15 +1,7 @@
 spring:
   application:
     name: service-registry
-eureka:
-  instance:
-    hostname: localhost
-  client:
-    register-with-eureka: false
-    fetch-registry: false
-    service-url:
-      defaultZone: http://${eureka.instance.hostname}:${server.port}
+  config:
+    import: "optional:configserver:http://3.109.184.195:8888"
 
 
-server:
-  port: 8761
